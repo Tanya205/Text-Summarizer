@@ -1,3 +1,5 @@
+#### Execute this file to automatically create all the files and folders.
+
 import os
 from pathlib import Path
 import logging
@@ -52,7 +54,7 @@ for filepath in list_of_files:
     ### For creating a file directory if it doesn not exist already
     if filedir != "":
         os.makedirs(filedir, exist_ok=True)
-        ### used to get logs{ on the terminal
+        ### used to get logs on the terminal
         logging.info(f"Creating directory: {filedir} for the file {filename}")
 
     ### creating filepath if it doesn't exist already or if its size is zero
@@ -63,3 +65,5 @@ for filepath in list_of_files:
 
     else:
         logging.info(f"{filename} already exists")
+
+### open terminal, write os.path.getsize("README.md")
